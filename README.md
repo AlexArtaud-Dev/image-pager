@@ -22,30 +22,9 @@ image-pager/
 ├── js/
 │   ├── app.js           # source (readable)
 │   └── app.min.js       # minified (served)
-├── nginx.conf           # nginx site config template
 ├── .gitignore
 └── README.md
 ```
-
-## Deploy with nginx
-
-1. Clone the repo to your server:
-   ```bash
-   git clone https://github.com/YOUR_USER/image-pager.git /var/www/image-pager
-   ```
-
-2. Copy and edit the nginx config:
-   ```bash
-   sudo cp /var/www/image-pager/nginx.conf /etc/nginx/sites-available/image-pager
-   sudo ln -s /etc/nginx/sites-available/image-pager /etc/nginx/sites-enabled/
-   ```
-
-3. Edit `server_name` and SSL paths in the config.
-
-4. Test & reload:
-   ```bash
-   sudo nginx -t && sudo systemctl reload nginx
-   ```
 
 ## Dev
 
