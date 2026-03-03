@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Pager</title>
+<meta name="description" content="Strip metadata, rename randomly, and zip your images. 100% client-side.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<h1>Image <span>Pager</span></h1>
+<p class="subtitle">Strip metadata · Rename · Zip</p>
+
+<div class="container">
+  <div class="dropzone" id="dropzone">
+    <div class="dropzone-icon">⬡</div>
+    <div class="dropzone-text">
+      Drop images here or <strong>click to browse</strong><br>
+      <small>JPG · PNG · WebP · GIF · BMP · TIFF</small>
+    </div>
+  </div>
+  <input type="file" id="fileInput" multiple accept="image/*">
+
+  <div id="fileList"></div>
+  <div id="summary"></div>
+
+  <div class="actions hidden" id="actions">
+    <button class="btn secondary" id="clearBtn">Clear</button>
+    <button class="btn primary" id="processBtn">Download .zip</button>
+  </div>
+
+  <div class="progress hidden" id="progress">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label" id="progressLabel"></div>
+  </div>
+
+  <div class="status" id="status"></div>
+</div>
+
+<footer>100% local — nothing leaves your browser.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+</html>
